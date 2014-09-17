@@ -1,8 +1,0 @@
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\TestOrientedDevelopment.Tip2.Tests.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\TestOrientedDevelopment.Tip2.Tests.pdb
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\Moq.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\TestOrientedDevelopment.Tip2.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\TestOrientedDevelopment.Tip2.pdb
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\bin\Debug\Moq.xml
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\obj\Debug\TestOrientedDevelopment.Tip2.Tests.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2.Tests\obj\Debug\TestOrientedDevelopment.Tip2.Tests.pdb

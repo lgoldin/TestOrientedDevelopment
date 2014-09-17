@@ -1,0 +1,8 @@
+*.suo
+bin
+obj
+*.cache
+_ReSharper*
+Debug
+*.dll
+*.pdb

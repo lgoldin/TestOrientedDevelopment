@@ -1,8 +1,0 @@
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\UnitTests.Tip1\bin\Debug\TestOrientedDevelopment.Tip1.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\UnitTests.Tip1\bin\Debug\TestOrientedDevelopment.Tip1.pdb
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\UnitTests.Tip1\obj\Debug\TestOrientedDevelopment.Tip1.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\UnitTests.Tip1\obj\Debug\TestOrientedDevelopment.Tip1.pdb
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip1\bin\Debug\TestOrientedDevelopment.Tip1.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip1\bin\Debug\TestOrientedDevelopment.Tip1.pdb
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip1\obj\Debug\TestOrientedDevelopment.Tip1.dll
-C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip1\obj\Debug\TestOrientedDevelopment.Tip1.pdb
