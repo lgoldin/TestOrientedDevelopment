@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f0e56b7f-c528-4315-bf57-125867f348b9" name="csmirnoff@BFNB12339 2014-09-16 10:17:52" runUser="BAUNET\csmirnoff" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c2a04dfe-17c9-4ba8-8abf-4e4758f44a08">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="csmirnoff_BFNB12339 2014-09-16 10_17_52">
+      <DeploymentItem filename="C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip1\bin\Debug\TestOrientedDevelopment.Tip1.dll" />
+      <DeploymentItem filename="C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\packages\Moq.4.2.1408.0717\lib\net40\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-16T10:17:52.6681271-03:00" queuing="2014-09-16T10:17:52.6981344-03:00" start="2014-09-16T10:17:52.7021350-03:00" finish="2014-09-16T10:17:52.9411559-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetLast10LoggedMessagesFromCloud" storage="c:\baufest\comunidad .net\test-oriented development\testorienteddevelopment\testorienteddevelopment.tip1.tests\bin\debug\testorienteddevelopment.tip1.tests.dll" id="4afb1fa3-66d3-67dd-2232-3715cfff0e1c">
+      <Execution id="46ba8c07-0105-4d6d-bc81-af82398c097e" />
+      <TestMethod codeBase="C:/Baufest/Comunidad .Net/Test-Oriented Development/TestOrientedDevelopment/TestOrientedDevelopment.Tip1.Tests/bin/Debug/TestOrientedDevelopment.Tip1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOrientedDevelopment.Tip1.Tests.Bad.ApplicationTests, TestOrientedDevelopment.Tip1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLast10LoggedMessagesFromCloud" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4afb1fa3-66d3-67dd-2232-3715cfff0e1c" executionId="46ba8c07-0105-4d6d-bc81-af82398c097e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="46ba8c07-0105-4d6d-bc81-af82398c097e" testId="4afb1fa3-66d3-67dd-2232-3715cfff0e1c" testName="GetLast10LoggedMessagesFromCloud" computerName="BFNB12339" duration="00:00:00.0158565" startTime="2014-09-16T10:17:52.7051335-03:00" endTime="2014-09-16T10:17:52.8991558-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46ba8c07-0105-4d6d-bc81-af82398c097e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

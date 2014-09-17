@@ -1,0 +1,9 @@
+http://www.codeproject.com/Articles/702246/Program-to-Interface-not-Implementation-Beginners
+
+http://blogs.collab.net/devopsci/ten-best-practices-for-continuous-integration#.VBgqsPl5P76
+
+http://googletesting.blogspot.in/2008/08/by-miko-hevery-so-you-decided-to.html
+
+http://en.wikipedia.org/wiki/Composition_over_inheritance
+
+http://stackoverflow.com/questions/49002/prefer-composition-over-inheritance

@@ -1,0 +1,4 @@
+C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2\bin\Debug\TestOrientedDevelopment.Tip2.dll
+C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2\bin\Debug\TestOrientedDevelopment.Tip2.pdb
+C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2\obj\Debug\TestOrientedDevelopment.Tip2.dll
+C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2\obj\Debug\TestOrientedDevelopment.Tip2.pdb

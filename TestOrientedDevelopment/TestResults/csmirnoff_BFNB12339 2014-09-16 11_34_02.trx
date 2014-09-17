@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f19c732d-3c6a-41ff-8b4d-4c076275aa92" name="csmirnoff@BFNB12339 2014-09-16 11:34:02" runUser="BAUNET\csmirnoff" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c2a04dfe-17c9-4ba8-8abf-4e4758f44a08">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="csmirnoff_BFNB12339 2014-09-16 11_34_02">
+      <DeploymentItem filename="C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\TestOrientedDevelopment.Tip2\bin\Debug\TestOrientedDevelopment.Tip2.dll" />
+      <DeploymentItem filename="C:\Baufest\Comunidad .Net\Test-Oriented Development\TestOrientedDevelopment\packages\Moq.4.2.1408.0717\lib\net40\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-09-16T11:34:02.3540943-03:00" queuing="2014-09-16T11:34:02.4060698-03:00" start="2014-09-16T11:34:02.4130708-03:00" finish="2014-09-16T11:34:02.7941127-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetLast10LoggedMessages" storage="c:\baufest\comunidad .net\test-oriented development\testorienteddevelopment\testorienteddevelopment.tip2.tests\bin\debug\testorienteddevelopment.tip2.tests.dll" id="538029fa-84b9-5091-69b4-e6b6a58228cd">
+      <Execution id="b873d0bc-b1d0-4952-a572-76bbac357c2c" />
+      <TestMethod codeBase="C:/Baufest/Comunidad .Net/Test-Oriented Development/TestOrientedDevelopment/TestOrientedDevelopment.Tip2.Tests/bin/Debug/TestOrientedDevelopment.Tip2.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOrientedDevelopment.Tip2.Tests.ApplicationTests, TestOrientedDevelopment.Tip2.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLast10LoggedMessages" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="538029fa-84b9-5091-69b4-e6b6a58228cd" executionId="b873d0bc-b1d0-4952-a572-76bbac357c2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b873d0bc-b1d0-4952-a572-76bbac357c2c" testId="538029fa-84b9-5091-69b4-e6b6a58228cd" testName="GetLast10LoggedMessages" computerName="BFNB12339" duration="00:00:00.1867546" startTime="2014-09-16T11:34:02.4160685-03:00" endTime="2014-09-16T11:34:02.7771109-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b873d0bc-b1d0-4952-a572-76bbac357c2c">
+    </UnitTestResult>
+  </Results>
+</TestRun>
