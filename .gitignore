@@ -7,3 +7,5 @@ Debug
 *.dll
 *.pdb
 *.suo
+TestResults
+*.trx
