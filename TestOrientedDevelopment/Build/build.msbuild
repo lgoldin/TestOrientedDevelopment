@@ -1,0 +1,67 @@
+<Project DefaultTargets="BuildPackage" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		
+	<PropertyGroup>
+		<Ambiente Condition=" $(Ambiente) == '' ">Release</Ambiente>
+		<WorkingDirectory>$(MSBuildProjectDirectory)\..</WorkingDirectory>
+		<Plataforma Condition="$(Plataforma) == ''">Any CPU</Plataforma>
+	</PropertyGroup>
+	
+    <Target Name="BuildPackage">
+		<CallTarget Targets="Cleanup;Build;Test;Publish;Deploy" />
+    </Target>
+	
+	<Target Name="Cleanup">
+		<Error Condition="$(WorkingDirectory) == ''" Text="WorkingDirectory variable must be defined" />
+
+		<Message Text="Ambiente:   			$(Ambiente)" />
+		<Message Text="Working Directory:	$(WorkingDirectory)" />
+		<Message Text="Plataforma:        	$(Plataforma)" />
+		
+		<ItemGroup>
+		  <FilesToDelete Include="$(WorkingDirectory)\bin\**\*.*" />
+		  <FilesToDelete Include="$(WorkingDirectory)\obj\**\*.*" />
+		</ItemGroup>
+		<Delete Files="@(FilesToDelete)" ContinueOnError="true" />
+		<RemoveDir Directories="$(WorkingDirectory)\TestResults\" />
+	</Target>
+  
+	<Target Name="Build" DependsOnTargets="Cleanup">
+		<MSBuild Projects="$(WorkingDirectory)\TestOrientedDevelopment.sln" Properties="Configuration=$(Ambiente);Platform=$(Plataforma)" />
+	</Target>
+
+	<Target Name="Test" DependsOnTargets="Build">
+		<PropertyGroup>
+			<VSTestConsolePath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow</VSTestConsolePath>
+
+			<TestProject1>$(WorkingDirectory)\TestOrientedDevelopment.Tip1.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip1.Tests.dll</TestProject1>
+			<TestProject2>$(WorkingDirectory)\TestOrientedDevelopment.Tip2.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip2.Tests.dll</TestProject2>
+			<TestProject3>$(WorkingDirectory)\TestOrientedDevelopment.Tip4.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip4.Tests.dll</TestProject3>
+			<TestProject4>$(WorkingDirectory)\TestOrientedDevelopment.Tip5.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip5.Tests.dll</TestProject4>
+			<TestProject5>$(WorkingDirectory)\TestOrientedDevelopment.Tip7.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip7.Tests.dll</TestProject5>
+		</PropertyGroup>
+
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject1)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject2)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject3)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject4)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject5)&quot; /logger:trx /UseVsixExtensions:true" />
+	</Target>
+
+	<Target Name="Publish" DependsOnTargets="Test">
+		<RemoveDir Directories="$(WorkingDirectory)\Publish" ContinueOnError="true"/>
+		<MSBuild 
+			Projects='$(WorkingDirectory)\TestOrientedDevelopment.UI.Web\TestOrientedDevelopment.UI.Web.csproj'
+			Properties="WebProjectOutputDir=$(WorkingDirectory)\Publish;OutDir=$(WorkingDirectory)\Publish\bin\" />
+	</Target>
+	
+    <Target Name="Deploy" DependsOnTargets="Publish">
+    	<CreateItem Include="$(WorkingDirectory)\Publish\**\*.*">
+    		<Output TaskParameter="Include" ItemName="DeployFiles" />
+    	</CreateItem>
+
+    	<Copy 
+			SourceFiles="@(DeployFiles)"
+    		DestinationFiles="@(DeployFiles->'C:\Inetpub\wwwroot\TestOrientedDevelopment\%(RecursiveDir)%(Filename)%(Extension)')" 
+			ContinueOnError="false"	/>	
+    </Target>
+</Project>

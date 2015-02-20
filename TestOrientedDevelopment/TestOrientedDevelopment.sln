@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOrientedDevelopment.Tip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOrientedDevelopment.Tip7.Tests", "TestOrientedDevelopment.Tip7.Tests\TestOrientedDevelopment.Tip7.Tests.csproj", "{F5035C85-9B38-46D7-AB21-B322A8392C06}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{CDA5C357-A0A7-4CC0-A28B-9D66751009ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOrientedDevelopment.UI.Web", "TestOrientedDevelopment.UI.Web\TestOrientedDevelopment.UI.Web.csproj", "{9CC071AC-DC64-4C70-848A-A5726B4E86A8}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = TestOrientedDevelopment.vsmdi
@@ -87,6 +91,10 @@ Global
 		{F5035C85-9B38-46D7-AB21-B322A8392C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5035C85-9B38-46D7-AB21-B322A8392C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5035C85-9B38-46D7-AB21-B322A8392C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CC071AC-DC64-4C70-848A-A5726B4E86A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC071AC-DC64-4C70-848A-A5726B4E86A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC071AC-DC64-4C70-848A-A5726B4E86A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC071AC-DC64-4C70-848A-A5726B4E86A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,5 +112,6 @@ Global
 		{2A6A2FED-8D64-423D-82DD-33761CDC2D26} = {5960B876-7C2E-4A6E-B55F-AFA0E931B192}
 		{87868050-A036-47FD-86D0-C2A21859AAFE} = {5960B876-7C2E-4A6E-B55F-AFA0E931B192}
 		{F5035C85-9B38-46D7-AB21-B322A8392C06} = {5960B876-7C2E-4A6E-B55F-AFA0E931B192}
+		{9CC071AC-DC64-4C70-848A-A5726B4E86A8} = {CDA5C357-A0A7-4CC0-A28B-9D66751009ED}
 	EndGlobalSection
 EndGlobal
