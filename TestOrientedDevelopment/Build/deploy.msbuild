@@ -1,0 +1,14 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Target Name="Deploy" DependsOnTargets="Publish">
+    	<CreateItem Include="$(WorkingDirectory)\Publish\**\*.*">
+    		<Output TaskParameter="Include" ItemName="DeployFiles" />
+    	</CreateItem>
+
+    	<Copy 
+			SourceFiles="@(DeployFiles)"
+    		DestinationFiles="@(DeployFiles->'C:\Inetpub\wwwroot\TestOrientedDevelopment\%(RecursiveDir)%(Filename)%(Extension)')" 
+			ContinueOnError="false"	/>	
+    </Target>
+	
+</Project>

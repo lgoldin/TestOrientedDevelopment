@@ -1,0 +1,21 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<Target Name="Test" DependsOnTargets="Compile">
+		<PropertyGroup>
+			<VSTestConsolePath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow</VSTestConsolePath>
+
+			<TestProject1>$(WorkingDirectory)\TestOrientedDevelopment.Tip1.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip1.Tests.dll</TestProject1>
+			<TestProject2>$(WorkingDirectory)\TestOrientedDevelopment.Tip2.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip2.Tests.dll</TestProject2>
+			<TestProject3>$(WorkingDirectory)\TestOrientedDevelopment.Tip4.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip4.Tests.dll</TestProject3>
+			<TestProject4>$(WorkingDirectory)\TestOrientedDevelopment.Tip5.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip5.Tests.dll</TestProject4>
+			<TestProject5>$(WorkingDirectory)\TestOrientedDevelopment.Tip7.Tests\bin\$(Ambiente)\TestOrientedDevelopment.Tip7.Tests.dll</TestProject5>
+		</PropertyGroup>
+
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject1)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject2)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject3)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject4)&quot; /logger:trx /UseVsixExtensions:true" />
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject5)&quot; /logger:trx /UseVsixExtensions:true" />
+	</Target>	
+	
+</Project>
