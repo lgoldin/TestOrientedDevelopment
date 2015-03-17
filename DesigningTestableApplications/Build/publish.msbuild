@@ -1,0 +1,10 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<Target Name="Publish" DependsOnTargets="Test">
+		<RemoveDir Directories="$(WorkingDirectory)\Publish" ContinueOnError="true"/>
+		<MSBuild 
+			Projects='$(WorkingDirectory)\DesigningTestableApplications.UI.Web\DesigningTestableApplications.UI.Web.csproj'
+			Properties="WebProjectOutputDir=$(WorkingDirectory)\Publish;OutDir=$(WorkingDirectory)\Publish\bin\" />
+	</Target>
+	
+</Project>
