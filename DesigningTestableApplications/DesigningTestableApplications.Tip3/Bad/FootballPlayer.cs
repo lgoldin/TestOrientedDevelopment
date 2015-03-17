@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestOrientedDevelopment.Tip3.Bad
+namespace DesigningTestableApplications.Tip3.Bad
 {
     public class FootballPlayer : Player
     {

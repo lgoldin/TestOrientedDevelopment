@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestOrientedDevelopment.Tip1.Good
+﻿namespace DesigningTestableApplications.Tip1.Good
 {
     public interface ILogger
     {

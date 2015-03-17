@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TestOrientedDevelopment.Tip1.Good
+namespace DesigningTestableApplications.Tip1.Good
 {
     public class Application
     {

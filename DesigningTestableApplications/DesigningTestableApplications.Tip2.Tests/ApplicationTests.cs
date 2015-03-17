@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace TestOrientedDevelopment.Tip2.Tests
+namespace DesigningTestableApplications.Tip2.Tests
 {
     [TestClass]
     public class ApplicationTests

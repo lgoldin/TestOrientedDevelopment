@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestOrientedDevelopment.Tip1.Bad
+﻿namespace DesigningTestableApplications.Tip1.Bad
 {
     public class Logger
     {

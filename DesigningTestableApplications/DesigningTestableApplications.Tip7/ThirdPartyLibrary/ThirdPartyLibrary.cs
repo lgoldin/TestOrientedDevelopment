@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip7.ThirdPartyLibrary
+﻿namespace DesigningTestableApplications.Tip7.ThirdPartyLibrary
 {
     public static class ThirdPartyLibrary
     {

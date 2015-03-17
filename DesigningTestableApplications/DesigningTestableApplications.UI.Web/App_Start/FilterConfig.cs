@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace TestOrientedDevelopment.UI.Web
+namespace DesigningTestableApplications.UI.Web.App_Start
 {
     public class FilterConfig
     {

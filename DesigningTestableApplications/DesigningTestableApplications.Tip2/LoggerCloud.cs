@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip2
+﻿namespace DesigningTestableApplications.Tip2
 {
     public class LoggerCloud : ILogger
     {

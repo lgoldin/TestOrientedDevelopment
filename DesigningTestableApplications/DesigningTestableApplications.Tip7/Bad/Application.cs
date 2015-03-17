@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip7.Bad
+﻿namespace DesigningTestableApplications.Tip7.Bad
 {
     public class Application
     {

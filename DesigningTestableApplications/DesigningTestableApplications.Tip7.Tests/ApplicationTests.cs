@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DesigningTestableApplications.Tip7.Good;
+using DesigningTestableApplications.Tip7.Good.Wrapper;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using TestOrientedDevelopment.Tip7.Good;
-using TestOrientedDevelopment.Tip7.Good.Wrapper;
 
-namespace TestOrientedDevelopment.Tip7.Tests
+namespace DesigningTestableApplications.Tip7.Tests
 {
     [TestClass]
     public class ApplicationTests

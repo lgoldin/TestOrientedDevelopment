@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TestOrientedDevelopment.Tip4
+namespace DesigningTestableApplications.Tip4
 {
     public class Coach
     {

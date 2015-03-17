@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip7.Good.Wrapper
+﻿namespace DesigningTestableApplications.Tip7.Good.Wrapper
 {
     public interface IWrapper
     {

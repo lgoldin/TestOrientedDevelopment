@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip3.Bad
+﻿namespace DesigningTestableApplications.Tip3.Bad
 {
     public abstract class Player
     {

@@ -1,11 +1,10 @@
-﻿using System.Linq;
+﻿using DesigningTestableApplications.Tip5.Service;
+using DesigningTestableApplications.Tip5.UI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using TestOrientedDevelopment.Tip5.UI;
-using TestOrientedDevelopment.Tip5.Service;
 using System;
 
-namespace TestOrientedDevelopment.Tip5.Tests
+namespace DesigningTestableApplications.Tip5.Tests
 {
     [TestClass]
     public class UITests

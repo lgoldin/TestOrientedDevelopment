@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip5.Service
+﻿namespace DesigningTestableApplications.Tip5.Service
 {
     public interface IService
     {

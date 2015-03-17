@@ -1,6 +1,6 @@
-﻿using TestOrientedDevelopment.Tip7.Good.Wrapper;
+﻿using DesigningTestableApplications.Tip7.Good.Wrapper;
 
-namespace TestOrientedDevelopment.Tip7.Good
+namespace DesigningTestableApplications.Tip7.Good
 {
     public class Application
     {

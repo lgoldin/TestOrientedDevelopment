@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
+using DesigningTestableApplications.Tip1.Good;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestOrientedDevelopment.Tip1.Good;
 
-namespace TestOrientedDevelopment.Tip1.Tests.Good
+namespace DesigningTestableApplications.Tip1.Tests.Good
 {
     [TestClass]
     public class ApplicationTests

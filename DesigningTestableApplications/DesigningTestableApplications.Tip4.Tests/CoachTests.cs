@@ -1,10 +1,7 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestOrientedDevelopment.Tip4.Tests
+namespace DesigningTestableApplications.Tip4.Tests
 {
     [TestClass]
     public class CoachTests

@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip5.UI
+﻿namespace DesigningTestableApplications.Tip5.UI
 {
     public class ResultModel
     {

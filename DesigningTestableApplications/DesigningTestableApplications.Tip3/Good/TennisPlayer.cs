@@ -1,4 +1,4 @@
-﻿namespace TestOrientedDevelopment.Tip3.Good
+﻿namespace DesigningTestableApplications.Tip3.Good
 {
     public class TennisPlayer : IPlayer, IDrive, ISmash
     {
