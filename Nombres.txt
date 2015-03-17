@@ -1,0 +1,2 @@
+Designing Testable Applications - Part I: Unit Tests
+Designing Testable Applications - Part II: DB Integration & Legacy Code
