@@ -4,7 +4,6 @@ obj
 *.cache
 _ReSharper*
 Debug
-*.dll
 *.pdb
 *.suo
 TestResults
