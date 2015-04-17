@@ -4,7 +4,7 @@
     {
         public string Method()
         {
-            return ThirdPartyLibrary.ThirdPartyLibrary.DoWork("Tip", 7);
+            return ThirdPartyLibrary.ThirdPartyLibrary.DoWork("Tip", 7).Result;
         }
     }
 }
