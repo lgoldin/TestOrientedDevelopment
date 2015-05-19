@@ -18,8 +18,11 @@ namespace DesigningTestableApplications.Tip5.UI
             //Calls service
             Result result = this.service.Method(param1, param2);
 
+            //Method code...
+            var numberText = string.Format("Number: {0} - Text: {1}", result.Number, result.Text);
+
             //Returns the result
-            return new ResultModel { Number = result.Number, Text = result.Text, IsOk = result.IsOk };
+            return new ResultModel { NumberText = numberText, IsOk = result.IsOk };
         }
     }
 }

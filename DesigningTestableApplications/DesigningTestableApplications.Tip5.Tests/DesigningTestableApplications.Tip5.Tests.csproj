@@ -48,6 +48,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoachTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UITests.cs" />
   </ItemGroup>

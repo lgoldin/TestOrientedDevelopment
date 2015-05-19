@@ -23,8 +23,7 @@ namespace DesigningTestableApplications.Tip5.Tests
             ResultModel model = ui.UIMethod(45, "Mocks");
             
             // Assert on the expected results
-            Assert.AreEqual(22, model.Number);
-            Assert.AreEqual("Result", model.Text);
+            Assert.AreEqual("Number: 22 - Text: Result", model.NumberText);
             Assert.IsTrue(model.IsOk);
             
             // Verify that the mock object was called the expected number of times and with the expected parameters
