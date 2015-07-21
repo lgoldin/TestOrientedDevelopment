@@ -3,17 +3,15 @@ GO
 
 IF EXISTS (SELECT name FROM sys.databases WHERE name = 'DesigningTestableApplications')
     DROP DATABASE DesigningTestableApplications
-	  
-/****** Object:  Database [DesigningTestableApplications]    Script Date: 16/06/2015 10:53:19 a.m. ******/
-CREATE DATABASE [DesigningTestableApplications]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'DesigningTestableApplications', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012\MSSQL\DATA\DesigningTestableApplications.mdf' , SIZE = 5120KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+	
+/****** Object:  Database [DesigningTestableApplications]    Script Date: 07/21/2015 10:05:10 ******/
+CREATE DATABASE [DesigningTestableApplications] ON  PRIMARY 
+( NAME = N'DesigningTestableApplications', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL10_50.SQL2008\MSSQL\DATA\DesigningTestableApplications.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
-( NAME = N'DesigningTestableApplications_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012\MSSQL\DATA\DesigningTestableApplications_log.ldf' , SIZE = 2048KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+( NAME = N'DesigningTestableApplications_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL10_50.SQL2008\MSSQL\DATA\DesigningTestableApplications_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
 GO
 
-ALTER DATABASE [DesigningTestableApplications] SET COMPATIBILITY_LEVEL = 110
+ALTER DATABASE [DesigningTestableApplications] SET COMPATIBILITY_LEVEL = 100
 GO
 
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
@@ -91,6 +89,9 @@ GO
 ALTER DATABASE [DesigningTestableApplications] SET HONOR_BROKER_PRIORITY OFF 
 GO
 
+ALTER DATABASE [DesigningTestableApplications] SET  READ_WRITE 
+GO
+
 ALTER DATABASE [DesigningTestableApplications] SET RECOVERY FULL 
 GO
 
@@ -101,13 +102,4 @@ ALTER DATABASE [DesigningTestableApplications] SET PAGE_VERIFY CHECKSUM
 GO
 
 ALTER DATABASE [DesigningTestableApplications] SET DB_CHAINING OFF 
-GO
-
-ALTER DATABASE [DesigningTestableApplications] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
-GO
-
-ALTER DATABASE [DesigningTestableApplications] SET TARGET_RECOVERY_TIME = 0 SECONDS 
-GO
-
-ALTER DATABASE [DesigningTestableApplications] SET  READ_WRITE 
 GO
