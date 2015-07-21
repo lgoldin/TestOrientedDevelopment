@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A5E2B612-ABF5-4E8A-B88E-613F38D40485}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{18D71153-0F0B-49A8-87E9-9510A8B800EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesigningTestableApplications.Tests", "DesigningTestableApplications.Tests\DesigningTestableApplications.Tests.csproj", "{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesigningTestableApplications.ORM", "DesigningTestableApplications.ORM\DesigningTestableApplications.ORM.csproj", "{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB511A11-E7F1-4F26-B517-C5C6DE5DB6CA} = {A5E2B612-ABF5-4E8A-B88E-613F38D40485}
+		{8C71DB28-86D9-46D4-B80F-2AF2BA56BCFE} = {18D71153-0F0B-49A8-87E9-9510A8B800EF}
+	EndGlobalSection
+EndGlobal
