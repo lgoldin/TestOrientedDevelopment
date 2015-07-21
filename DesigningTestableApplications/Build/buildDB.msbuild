@@ -20,7 +20,7 @@
 		
 		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(ViewsScripts)" ContinueOnError="false" />
 
-		<!--<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(DataScripts)" ContinueOnError="false" />-->
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(DataScripts)" ContinueOnError="false" />
 	</Target>
 	
 </Project>
