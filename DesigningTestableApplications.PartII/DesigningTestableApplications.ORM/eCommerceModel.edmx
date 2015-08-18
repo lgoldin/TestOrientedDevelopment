@@ -354,7 +354,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrderItem_Order">
-          <End Role="Order" Type="DesigningTestableApplicationsModel.Order" Multiplicity="1" />
+          <End Role="Order" Type="DesigningTestableApplicationsModel.Order" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="OrderItem" Type="DesigningTestableApplicationsModel.OrderItem" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
@@ -484,6 +486,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

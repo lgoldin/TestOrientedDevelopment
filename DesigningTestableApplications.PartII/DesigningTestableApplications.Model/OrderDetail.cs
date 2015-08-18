@@ -7,24 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DesigningTestableApplications.ORM
+namespace DesigningTestableApplications.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Currency
+    public partial class OrderDetail
     {
-        public Currency()
-        {
-            this.Orders = new HashSet<Order>();
-            this.Prices = new HashSet<Price>();
-        }
-    
         public int Id { get; set; }
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<decimal> SubTotal { get; set; }
         public string Code { get; set; }
-        public string Description { get; set; }
-    
-        public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<Price> Prices { get; set; }
     }
 }
