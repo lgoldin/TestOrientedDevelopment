@@ -19,6 +19,7 @@ namespace DesigningTestableApplications.Tests
         public void SetUp()
         {
             this.dbContext = new DesigningTestableApplicationsEntities();
+            this.dbContext.Configuration.LazyLoadingEnabled = false;
             this.transactionScope = new TransactionScope(TransactionScopeOption.RequiresNew);
 
             var order = new Order

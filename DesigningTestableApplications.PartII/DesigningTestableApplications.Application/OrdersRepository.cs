@@ -18,7 +18,7 @@ namespace DesigningTestableApplications.Application
 
         public IList<Order> GetOrders()
         {
-            return this.context.Orders.Include("Currency").Include("Customer").Include("OrderItems").Include("OrderItems.Product").ToList();
+            return this.context.Orders.ToList();
         }
 
         public void AddOrder(Order order)
