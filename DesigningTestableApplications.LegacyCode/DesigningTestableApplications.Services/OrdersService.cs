@@ -18,12 +18,12 @@ namespace DesigningTestableApplications.Services
             var ordersRepository = new OrdersRepository();
             var productsRepository = new ProductsRepository();
             var currenciesRepository = new CurrenciesRepository();
-            var customersRepository = new CustomersRepository();
 
             order.Currency = currenciesRepository.GetCurrencyByCode(order.Currency.Code);
-            order.Customer = customersRepository.GetCustomer(order.Customer.FirstName, order.Customer.LastName, order.Customer.Email);
+            
+            order.OrderItems.ToList().ForEach(x => x.Product = productsRepository.GetById(x.ProductId));
 
-            if (order.OrderItems.Sum(x => x.Quantity * x.Product.Prices.FirstOrDefault(y => y.Currency.Code == order.Currency.Code).Amount) > 20000)
+            if (order.OrderItems.Sum(x => x.Quantity * (x.Product.Prices.First(y => y.Currency.Code == order.Currency.Code)).Amount) > 20000)
             {
                 order.OrderItems.Add(new OrderItem
                 {

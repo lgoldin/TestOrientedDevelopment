@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using DesigningTestableApplications.Model;
 using DesigningTestableApplications.ORM;
@@ -11,7 +12,7 @@ namespace DesigningTestableApplications.Repositories
         {
             using (var context = new DesigningTestableApplicationsEntities())
             {
-                return context.Orders.ToList();
+                return context.Orders.Include("OrderItems.Product.Prices").Include(x => x.Customer).ToList();
             }
         }
 

@@ -24,7 +24,7 @@ namespace DesigningTestableApplications.Tests
 
             var order = new Order
             {
-                Currency = this.dbContext.Currencies.Where(x => x.Code == "ARS").FirstOrDefault(),
+                Currency = this.dbContext.Currencies.FirstOrDefault(x => x.Code == "ARS"),
                 Customer = new Customer
                 {
                     Active = true,
@@ -71,8 +71,8 @@ namespace DesigningTestableApplications.Tests
             var ordersRepository = new OrdersRepository(this.dbContext);
             ordersRepository.AddOrder(new Order
             {
-                Currency = this.dbContext.Currencies.Where(x => x.Code == "ARS").FirstOrDefault(),
-                Customer = this.dbContext.Customers.Where(x => x.FirstName == "John" && x.LastName == "Doe").FirstOrDefault(),
+                Currency = this.dbContext.Currencies.FirstOrDefault(x => x.Code == "ARS"),
+                Customer = this.dbContext.Customers.FirstOrDefault(x => x.FirstName == "John" && x.LastName == "Doe"),
                 Date = new DateTime(2015, 09, 15),
                 OrderItems = new List<OrderItem>
                 {

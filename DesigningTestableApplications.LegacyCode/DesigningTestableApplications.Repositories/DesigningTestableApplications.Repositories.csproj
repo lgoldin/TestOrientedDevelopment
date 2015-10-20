@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomersRepository.cs" />
     <Compile Include="CurrenciesRepository.cs" />
     <Compile Include="ProductsRepository.cs" />
     <Compile Include="OrdersRepository.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using DesigningTestableApplications.Model;
 using DesigningTestableApplications.Services;
@@ -13,7 +14,15 @@ namespace DesigningTestableApplications.UI.Console
             service.AddOrder(new Order
             {
                 Currency = new Currency { Code = "ARS" },
-                Customer = new Customer { FirstName = "John", LastName = "Doe", Email = "jdoe@baufest.com" },
+                Customer = new Customer
+                {
+                    Active = true,
+                    Address = "Roosevelt 1655",
+                    Email = "jdoe@baufest.com",
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Phone = "4855-5572"
+                },
                 Date = new DateTime(2015, 10, 20),
                 OrderItems = new List<OrderItem>
                 {
@@ -25,7 +34,15 @@ namespace DesigningTestableApplications.UI.Console
             service.AddOrder(new Order
             {
                 Currency = new Currency { Code = "ARS" },
-                Customer = new Customer { FirstName = "Mary", LastName = "Jane", Email = "mjane@baufest.com" },
+                Customer = new Customer
+                    {
+                        FirstName = "Mary", 
+                        LastName = "Jane", 
+                        Email = "mjane@baufest.com", 
+                        Active = true, 
+                        Address = "Las Heras 568",
+                        Phone = "49623699"
+                    },
                 Date = new DateTime(2015, 10, 20),
                 OrderItems = new List<OrderItem>
                 {
@@ -35,10 +52,24 @@ namespace DesigningTestableApplications.UI.Console
 
             IList<Order> orders = service.GetOrders();
             ShowOrders(orders);
+            System.Console.ReadKey();
         }
 
-        private static void ShowOrders(IList<Order> orders)
+        private static void ShowOrders(IEnumerable<Order> orders)
         {
+            System.Console.WriteLine("---------------------------------------------------");
+
+            foreach (Order order in orders)
+            {
+                System.Console.WriteLine("{0} {1} {2}", order.Customer.LastName, order.Customer.FirstName, order.Customer.Email);
+
+                foreach (OrderItem item in order.OrderItems)
+                {
+                    System.Console.WriteLine("-- {0} {1} {2} {3}", item.Product.Name, item.Quantity, item.Product.Prices.First().Amount.ToString("C2"), (item.Quantity * item.Product.Prices.First().Amount).ToString("C2"));
+                }
+            }
+             
+            System.Console.WriteLine("---------------------------------------------------");
         }
     }
 }
