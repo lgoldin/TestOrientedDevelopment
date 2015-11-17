@@ -13,16 +13,8 @@ namespace DesigningTestableApplications.UI.Console
             var service = new OrdersService();
             service.AddOrder(new Order
             {
-                Currency = new Currency { Code = "ARS" },
-                Customer = new Customer
-                {
-                    Active = true,
-                    Address = "Roosevelt 1655",
-                    Email = "jdoe@baufest.com",
-                    FirstName = "John",
-                    LastName = "Doe",
-                    Phone = "4855-5572"
-                },
+                CurrencyId = 1,
+                CustomerId = 1,
                 Date = new DateTime(2015, 10, 20),
                 OrderItems = new List<OrderItem>
                 {
@@ -33,16 +25,8 @@ namespace DesigningTestableApplications.UI.Console
 
             service.AddOrder(new Order
             {
-                Currency = new Currency { Code = "ARS" },
-                Customer = new Customer
-                    {
-                        FirstName = "Mary", 
-                        LastName = "Jane", 
-                        Email = "mjane@baufest.com", 
-                        Active = true, 
-                        Address = "Las Heras 568",
-                        Phone = "49623699"
-                    },
+                CurrencyId = 1,
+                CustomerId = 2,
                 Date = new DateTime(2015, 10, 20),
                 OrderItems = new List<OrderItem>
                 {

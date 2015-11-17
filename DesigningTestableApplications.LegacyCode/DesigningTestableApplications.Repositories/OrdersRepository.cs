@@ -21,6 +21,15 @@ namespace DesigningTestableApplications.Repositories
             using (var context = new DesigningTestableApplicationsEntities())
             {
                 context.Orders.Add(order);
+                
+                order.OrderItems.ToList().ForEach(x => 
+                {
+                    context.Products.Attach(x.Product);
+                    context.Prices.Attach(x.Product.Prices.FirstOrDefault(y => y.CurrencyId == order.CurrencyId));
+                });
+                context.Currencies.Attach(order.Currency);
+                context.Customers.Attach(order.Customer);
+                
                 context.SaveChanges();
             }
         }

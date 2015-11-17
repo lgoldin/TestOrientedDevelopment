@@ -18,12 +18,16 @@ namespace DesigningTestableApplications.Services
             var ordersRepository = new OrdersRepository();
             var productsRepository = new ProductsRepository();
             var currenciesRepository = new CurrenciesRepository();
+            var customersRepository = new CustomersRepository();
 
-            order.Currency = currenciesRepository.GetCurrencyByCode(order.Currency.Code);
-            
+            order.Customer = customersRepository.GetById(order.CustomerId);
+
+            order.Currency = currenciesRepository.GetById(order.CurrencyId);
+
             order.OrderItems.ToList().ForEach(x => x.Product = productsRepository.GetById(x.ProductId));
 
-            if (order.OrderItems.Sum(x => x.Quantity * (x.Product.Prices.First(y => y.Currency.Code == order.Currency.Code)).Amount) > 20000)
+            //Si la suma de los ítems es mayor a 20.000, se le agregará un ítem de regalo
+            if (order.OrderItems.Sum(x => x.Quantity * (x.Product.Prices.First(y => y.Currency.Id == order.CurrencyId)).Amount) > 20000)
             {
                 order.OrderItems.Add(new OrderItem
                 {
