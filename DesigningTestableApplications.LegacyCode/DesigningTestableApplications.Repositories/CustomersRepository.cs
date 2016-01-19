@@ -4,14 +4,11 @@ using DesigningTestableApplications.ORM;
 
 namespace DesigningTestableApplications.Repositories
 {
-    public class CustomersRepository
+    public class CustomersRepository : Repository
     {
         public Customer GetById(int id)
         {
-            using (var context = new DesigningTestableApplicationsEntities())
-            {
-                return context.Customers.FirstOrDefault(x => x.Id == id);
-            }
+            return Context.Customers.FirstOrDefault(x => x.Id == id);
         }
     }
 }

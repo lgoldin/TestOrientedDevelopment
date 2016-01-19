@@ -4,22 +4,16 @@ using DesigningTestableApplications.ORM;
 
 namespace DesigningTestableApplications.Repositories
 {
-    public class ProductsRepository
+    public class ProductsRepository : Repository
     {
         public Product GetGift()
         {
-            using (var context = new DesigningTestableApplicationsEntities())
-            {
-                return context.Products.Include("Prices.Currency").FirstOrDefault(x => x.Name == "Pen Drive Gift");
-            }
+            return Context.Products.Include("Prices.Currency").FirstOrDefault(x => x.Name == "Pen Drive Gift");
         }
 
         public Product GetById(int id)
         {
-            using (var context = new DesigningTestableApplicationsEntities())
-            {
-                return context.Products.Include("Prices.Currency").FirstOrDefault(x => x.Id == id);
-            }
+            return Context.Products.Include("Prices.Currency").FirstOrDefault(x => x.Id == id);
         }
     }
 }

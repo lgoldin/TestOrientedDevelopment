@@ -4,22 +4,16 @@ using DesigningTestableApplications.ORM;
 
 namespace DesigningTestableApplications.Repositories
 {
-    public class CurrenciesRepository
+    public class CurrenciesRepository : Repository
     {
         public Currency GetByCode(string code)
         {
-            using (var context = new DesigningTestableApplicationsEntities())
-            {
-                return context.Currencies.FirstOrDefault(x => x.Code == code);
-            }
+            return Context.Currencies.FirstOrDefault(x => x.Code == code);
         }
 
         public Currency GetById(int id)
         {
-            using (var context = new DesigningTestableApplicationsEntities())
-            {
-                return context.Currencies.FirstOrDefault(x => x.Id == id);
-            }
+            return Context.Currencies.FirstOrDefault(x => x.Id == id);
         }
     }
 }
