@@ -1,10 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
 using DesigningTestableApplications.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace DesigningTestableApplications.UnitTests
 {
@@ -59,6 +57,70 @@ namespace DesigningTestableApplications.UnitTests
             decimal amount = order.GetAmount();
 
             Assert.AreEqual(699.98M, amount);
+        }
+
+        [TestMethod]
+        public void GetPointsX1()
+        {
+            var order = new Order();
+            var amount = 100M;
+
+            var points = order.GetPoints(amount);
+
+            Assert.AreEqual(100, points);
+        }
+
+
+        [TestMethod]
+        public void GetPointsX2()
+        {
+            var order = new Order();
+            var amount = 5000M;
+
+            var points = order.GetPoints(amount);
+
+            Assert.AreEqual(10000M, points);
+        }
+
+        [TestMethod]
+        public void GetPointsX3()
+        {
+            var order = new Order();
+            var amount = 10000M;
+
+            var points = order.GetPoints(amount);
+
+            Assert.AreEqual(30000M, points);
+        }
+
+        [TestMethod]
+        public void GetPointsX4()
+        {
+            var order = new Order();
+            var amount = 20000M;
+
+            var points = order.GetPoints(amount);
+
+            Assert.AreEqual(80000M, points);
+        }
+
+        [TestMethod]
+        public void GetPointsParameterless()
+        {
+            var mock = new Mock<Order>();
+            mock.Setup(x => x.GetAmount()).Returns(7999.9M);
+            mock.Setup(x => x.GetPoints(8000M)).Returns(16000);
+
+            mock.CallBase = true;
+
+            var order = mock.Object;
+
+            var points = order.GetPoints();
+
+            Assert.AreEqual(16000, points);
+
+            mock.Verify(x => x.GetAmount(), Times.Once);
+            mock.Verify(x => x.GetPoints(8000M), Times.Once);
         }
     }
 }

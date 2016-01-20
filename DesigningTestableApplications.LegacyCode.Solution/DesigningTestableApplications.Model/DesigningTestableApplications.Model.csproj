@@ -61,6 +61,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderProperties.cs" />
+    <Compile Include="PointsMultiplier.cs" />
     <Compile Include="Price.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DesigningTestableApplications.Interfaces.Repositories;
 using DesigningTestableApplications.Model;
@@ -54,7 +55,7 @@ namespace DesigningTestableApplications.Services
             }
 
             //Asignación de puntos
-
+            order.Customer.Points += order.GetPoints();
 
             this.ordersRepository.AddOrder(order);
         }

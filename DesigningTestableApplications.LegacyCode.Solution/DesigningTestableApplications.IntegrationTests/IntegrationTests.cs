@@ -49,6 +49,9 @@ namespace DesigningTestableApplications.IntegrationTests
             Assert.AreEqual(2, order.OrderItems.ElementAt(1).Quantity);
             Assert.AreEqual(6, order.OrderItems.ElementAt(2).ProductId);
             Assert.AreEqual(1, order.OrderItems.ElementAt(2).Quantity);
+
+            Assert.AreEqual(30799.77M, order.GetAmount());
+            Assert.AreEqual(123200M, order.GetPoints());
         }
 
         [TestMethod]
@@ -72,6 +75,9 @@ namespace DesigningTestableApplications.IntegrationTests
             Assert.AreEqual(1, order.OrderItems.Count);
             Assert.AreEqual(3, order.OrderItems.ElementAt(0).ProductId);
             Assert.AreEqual(1, order.OrderItems.ElementAt(0).Quantity);
+
+            Assert.AreEqual(2399.99M, order.GetAmount());
+            Assert.AreEqual(2400M, order.GetPoints());
         }
 
         [TestCleanup]
