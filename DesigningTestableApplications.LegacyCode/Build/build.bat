@@ -1,0 +1,1 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /t:BuildPackage build.msbuild /verbosity:d /property:Ambiente="Release";Plataforma="Any CPU"

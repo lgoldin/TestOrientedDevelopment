@@ -26,6 +26,7 @@ namespace DesigningTestableApplications.Model
         public string Address { get; set; }
         public string Phone { get; set; }
         public bool Active { get; set; }
+        public int Points { get; set; }
     
         public virtual ICollection<Order> Orders { get; set; }
     }

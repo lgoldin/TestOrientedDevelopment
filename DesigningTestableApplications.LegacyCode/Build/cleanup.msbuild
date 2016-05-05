@@ -1,0 +1,18 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Target Name="Cleanup">
+		<Error Condition="$(WorkingDirectory) == ''" Text="WorkingDirectory variable must be defined" />
+
+		<Message Text="Ambiente:   			$(Ambiente)" />
+		<Message Text="Working Directory:	$(WorkingDirectory)" />
+		<Message Text="Plataforma:        	$(Plataforma)" />
+		
+		<ItemGroup>
+		  <FilesToDelete Include="$(WorkingDirectory)\bin\**\*.*" />
+		  <FilesToDelete Include="$(WorkingDirectory)\obj\**\*.*" />
+		</ItemGroup>
+		<Delete Files="@(FilesToDelete)" ContinueOnError="true" />
+		<RemoveDir Directories="$(WorkingDirectory)\TestResults\" />
+	</Target>
+
+</Project>

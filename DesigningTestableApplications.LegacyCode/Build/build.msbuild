@@ -1,0 +1,29 @@
+<Project DefaultTargets="BuildPackage" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>	
+	
+	<Import Project="cleanup.msbuild"/>
+	<Import Project="compile.msbuild"/>
+	<Import Project="connectionString.msbuild"/>
+	<Import Project="buildDB.msbuild"/>
+	<Import Project="test.msbuild"/>
+	
+	<PropertyGroup>
+		<Ambiente Condition=" $(Ambiente) == '' ">Release</Ambiente>
+		<WorkingDirectory>$(MSBuildProjectDirectory)\..</WorkingDirectory>
+		<Plataforma Condition="$(Plataforma) == ''">Any CPU</Plataforma>
+		<NoDBConnection>$(ConnectionString)</NoDBConnection>
+		<DBConnection>$(ConnectionString)database=DesigningTestableApplications;</DBConnection>
+	</PropertyGroup>
+	
+    <Target Name="BuildPackage">
+		<CallTarget Targets="Cleanup;Compile;BuildDB;Test;" />
+    </Target>
+
+</Project>
+
+
+
+
+
+

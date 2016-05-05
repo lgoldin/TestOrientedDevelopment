@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using DesigningTestableApplications.Model;
 using DesigningTestableApplications.ORM;
 
@@ -9,7 +7,7 @@ namespace DesigningTestableApplications.Application
 {
     public class OrdersRepository
     {
-        private DesigningTestableApplicationsEntities context;
+        private readonly DesigningTestableApplicationsEntities context;
 
         public OrdersRepository(DesigningTestableApplicationsEntities context)
         {

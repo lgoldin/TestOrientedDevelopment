@@ -1,0 +1,12 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<Target Name="Test" DependsOnTargets="Compile">
+		<PropertyGroup>
+			<VSTestConsolePath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow</VSTestConsolePath>
+			<TestProject1>$(WorkingDirectory)\DesigningTestableApplications.IntegrationTests\bin\$(Ambiente)\DesigningTestableApplications.IntegrationTests.dll</TestProject1>
+		</PropertyGroup>
+
+		<Exec Command="&quot;$(VSTestConsolePath)\vstest.console.exe&quot; &quot;$(TestProject1)&quot; /logger:trx /UseVsixExtensions:true" />
+	</Target>	
+	
+</Project>

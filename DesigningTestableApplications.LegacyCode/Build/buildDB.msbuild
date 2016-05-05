@@ -1,0 +1,28 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup>
+		<CreateDBScripts Include="$(WorkingDirectory)\Scripts\DB\*.sql" />
+		<TableScripts Include="$(WorkingDirectory)\Scripts\Tables\*.sql" /> 
+		<StoredProceduresScripts Include="$(WorkingDirectory)\Scripts\StoredProcedures\*.sql" />
+		<ViewsScripts Include="$(WorkingDirectory)\Scripts\Views\*.sql" />
+		<FunctionsScripts Include="$(WorkingDirectory)\Scripts\Functions\*.sql" />
+		<DataScripts Include="$(WorkingDirectory)\Scripts\Data\*.sql" />
+	</ItemGroup>
+
+	<Target Name="BuildDB">
+		<ExecuteDDL ConnectionString="$(NoDBConnection)" Files="@(CreateDBScripts)" ContinueOnError="false" />
+		
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(TableScripts)" ContinueOnError="false" />
+		
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(FunctionsScripts)" ContinueOnError="false" />
+		
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(StoredProceduresScripts)" ContinueOnError="false" />
+		
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(ViewsScripts)" ContinueOnError="false" />
+
+		<ExecuteDDL ConnectionString="$(DBConnection)" Files="@(DataScripts)" ContinueOnError="false" />
+	</Target>
+	
+</Project>
+
+

@@ -1,0 +1,7 @@
+<Project DefaultTargets="Error" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<Target Name="Compile" DependsOnTargets="Cleanup">
+		<MSBuild Projects="$(WorkingDirectory)\DesigningTestableApplications.LegacyCode.sln" Properties="Configuration=$(Ambiente);Platform=$(Plataforma)" />
+	</Target>	
+	
+</Project>
