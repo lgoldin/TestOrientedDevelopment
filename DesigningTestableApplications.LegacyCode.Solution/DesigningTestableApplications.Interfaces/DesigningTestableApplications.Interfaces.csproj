@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\ICurrenciesRepository.cs" />
     <Compile Include="Repositories\ICustomersRepository.cs" />
     <Compile Include="Repositories\IOrdersRepository.cs" />
     <Compile Include="Repositories\IProductsRepository.cs" />

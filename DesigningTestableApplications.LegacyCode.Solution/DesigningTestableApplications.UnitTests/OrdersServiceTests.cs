@@ -15,18 +15,16 @@ namespace DesigningTestableApplications.UnitTests
         public void AddOrder()
         {
             var ordersRepository = new Mock<IOrdersRepository>();
-            var customersRepository = new Mock<ICustomersRepository>();
-            var currenciesRepository = new Mock<ICurrenciesRepository>();
             var productsRepository = new Mock<IProductsRepository>();
+            var customersRepository = new Mock<ICustomersRepository>();
 
             var customer = new Customer { Id = 11 };
-            var currency = new Currency { Id = 1 };
             var firstProduct = new Product { Id = 456 };
             var secondProduct = new Product { Id = 2435 };
             var gift = new Product { Id = 6 };
 
             customersRepository.Setup(x => x.GetById(11)).Returns(customer);
-            currenciesRepository.Setup(x => x.GetById(1)).Returns(currency);
+
             productsRepository.Setup(x => x.GetById(456)).Returns(firstProduct);
             productsRepository.Setup(x => x.GetById(2435)).Returns(secondProduct);
             productsRepository.Setup(x => x.GetGift()).Returns(gift);
@@ -42,9 +40,8 @@ namespace DesigningTestableApplications.UnitTests
             order.Setup(x => x.GetAmount()).Returns(21999);
             order.Setup(x => x.GetPoints()).Returns(87996);
             order.SetupProperty(x => x.Customer);
-            order.SetupProperty(x => x.Currency);
 
-            var ordersService = new OrdersService(ordersRepository.Object, productsRepository.Object, currenciesRepository.Object, customersRepository.Object);
+            var ordersService = new OrdersService(ordersRepository.Object, productsRepository.Object, customersRepository.Object);
 
             ordersService.AddOrder(order.Object);
 
@@ -53,12 +50,11 @@ namespace DesigningTestableApplications.UnitTests
                 x.AddOrder(
                     It.Is<Order>(
                         y =>
-                        y.Customer == customer && y.Currency == currency && y.OrderItems.Count == 3 &&
+                        y.Customer == customer && y.CurrencyId == 1 && y.OrderItems.Count == 3 &&
                         y.OrderItems.First(o => o.Product == gift).Quantity == 1 &&
                         y.Customer.Points == 87996)),
                 Times.Once);
 
-            currenciesRepository.Verify(x => x.GetById(1), Times.Once);
             customersRepository.Verify(x => x.GetById(11), Times.Once);
             productsRepository.Verify(x => x.GetById(456), Times.Once);
             productsRepository.Verify(x => x.GetById(2435), Times.Once);

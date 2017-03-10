@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using DesigningTestableApplications.Interfaces;
 using DesigningTestableApplications.Interfaces.Repositories;
 using DesigningTestableApplications.Model;
 
@@ -11,7 +10,7 @@ namespace DesigningTestableApplications.Repositories
     {
         public IList<Order> GetOrders()
         {
-            return Context.Orders.Include("OrderItems.Product.Prices").Include(x => x.Customer).ToList();
+            return Context.Orders.Include("OrderItems.Product.Prices").Include(x => x.Customer).Include(x => x.Currency).ToList();
         }
 
         public void AddOrder(Order order)

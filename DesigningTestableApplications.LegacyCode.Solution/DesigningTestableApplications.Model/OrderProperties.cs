@@ -16,8 +16,7 @@ namespace DesigningTestableApplications.Model
 
         public virtual decimal GetAmount()
         {
-            return
-                this.OrderItems.Sum(x => x.Quantity * (x.Product.Prices.First(y => y.Currency.Id == this.CurrencyId)).Amount);
+            return this.OrderItems.Sum(x => x.Quantity * (x.Product.Prices.First(y => y.Currency.Id == this.CurrencyId)).Amount);
         }
 
         public virtual int GetPoints()

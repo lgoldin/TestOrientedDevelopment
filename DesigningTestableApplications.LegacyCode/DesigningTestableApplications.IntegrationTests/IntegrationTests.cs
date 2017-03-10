@@ -40,8 +40,12 @@ namespace DesigningTestableApplications.IntegrationTests
                 }
             });
 
-            Order order = this.dbContext.Orders.Include("OrderItems").FirstOrDefault();
+            Order order = this.dbContext.Orders.Include("OrderItems.Product.Prices").Include("Customer").Include("Currency").FirstOrDefault();
             Assert.IsNotNull(order);
+            Assert.AreEqual(1, order.CustomerId);
+            Assert.AreEqual(1, order.Customer.Id);
+            Assert.AreEqual(1, order.CurrencyId);
+            Assert.AreEqual(1, order.Currency.Id);
             Assert.AreEqual(3, order.OrderItems.Count);
             Assert.AreEqual(2, order.OrderItems.ElementAt(0).ProductId);
             Assert.AreEqual(1, order.OrderItems.ElementAt(0).Quantity);
@@ -67,8 +71,12 @@ namespace DesigningTestableApplications.IntegrationTests
                 }
             });
 
-            Order order = this.dbContext.Orders.Include("OrderItems").FirstOrDefault();
+            Order order = this.dbContext.Orders.Include("OrderItems.Product.Prices").Include("Customer").Include("Currency").FirstOrDefault();
             Assert.IsNotNull(order);
+            Assert.AreEqual(2, order.CustomerId);
+            Assert.AreEqual(2, order.Customer.Id);
+            Assert.AreEqual(1, order.CurrencyId);
+            Assert.AreEqual(1, order.Currency.Id);
             Assert.AreEqual(1, order.OrderItems.Count);
             Assert.AreEqual(3, order.OrderItems.ElementAt(0).ProductId);
             Assert.AreEqual(1, order.OrderItems.ElementAt(0).Quantity);
